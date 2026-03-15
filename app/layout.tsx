@@ -3,7 +3,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "IQ+1",
-  description: "Pay $1 for a blessing and receive an entirely unserious IQ upgrade.",
+  description:
+    "Pay $1 for a playful internet blessing and receive an entirely unserious IQ upgrade.",
 };
 
 export default function RootLayout({

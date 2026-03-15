@@ -18,13 +18,18 @@ export function CheckoutButton() {
       const data = (await response.json()) as { error?: string; url?: string };
 
       if (!response.ok || !data.url) {
-        throw new Error(data.error || "Unable to start checkout.");
+        throw new Error(
+          data.error ||
+            "Unable to start checkout right now. Please try again in a moment.",
+        );
       }
 
       window.location.href = data.url;
     } catch (error) {
       const message =
-        error instanceof Error ? error.message : "Unable to start checkout.";
+        error instanceof Error
+          ? error.message
+          : "Unable to start checkout right now. Please try again in a moment.";
 
       setErrorMessage(message);
       setIsLoading(false);
