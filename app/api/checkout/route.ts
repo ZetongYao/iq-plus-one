@@ -1,12 +1,17 @@
 import { NextResponse } from "next/server";
 import { getBaseUrl, getOptionalEnv } from "../../../lib/env";
 import { getStripe } from "../../../lib/stripe";
+import { createClient } from "../../../lib/supabase/server";
 
 export const runtime = "nodejs";
 
 export async function POST(request: Request) {
   try {
     const stripe = getStripe();
+    const supabase = await createClient();
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
     const baseUrl = getBaseUrl(new URL(request.url).origin);
     const stripePriceId = getOptionalEnv("STRIPE_PRICE_ID");
 
@@ -37,6 +42,7 @@ export async function POST(request: Request) {
           ],
       metadata: {
         productName: "IQ+1 Blessing",
+        ...(user?.id ? { user_id: user.id } : {}),
       },
     });
 

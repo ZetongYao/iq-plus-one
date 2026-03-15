@@ -1,10 +1,21 @@
+import { AuthNav } from "./components/auth-nav";
 import { CheckoutButton } from "./components/checkout-button";
 import { SiteFooter } from "./components/site-footer";
+import { createClient } from "../lib/supabase/server";
 
-export default function Home() {
+export default async function Home() {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
   return (
     <main className="flex min-h-screen items-center justify-center px-6 py-16">
       <div className="w-full max-w-3xl">
+        <div className="mb-4">
+          <AuthNav userEmail={user?.email} />
+        </div>
+
         <section className="hero-card text-center">
           <p className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-slate-500">
             Internet-grade enhancement
