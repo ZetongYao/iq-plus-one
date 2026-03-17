@@ -17,7 +17,7 @@ export function AuthNav({ userEmail }: AuthNavProps) {
         </Link>
         <Link
           href="/signup"
-          className="rounded-full bg-slate-950 px-4 py-2 font-medium text-white transition hover:bg-slate-800"
+          className="rounded-full border border-slate-300 bg-white px-4 py-2 font-medium text-slate-700 transition hover:border-slate-400 hover:bg-slate-50"
         >
           Sign up
         </Link>
