@@ -27,9 +27,12 @@ export function AuthNav({ userEmail }: AuthNavProps) {
 
   return (
     <div className="flex flex-wrap items-center justify-end gap-3 text-sm">
-      <div className="rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-slate-600">
+      <Link
+        href="/purchase-history"
+        className="rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-slate-600 transition hover:border-slate-300 hover:bg-slate-50"
+      >
         {userEmail}
-      </div>
+      </Link>
       <LogoutButton />
     </div>
   );
