@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { signup } from "../auth/actions";
-import { SiteFooter } from "../components/site-footer";
 
 type SignupPageProps = {
   searchParams: Promise<{
@@ -12,33 +11,29 @@ export default async function SignupPage({ searchParams }: SignupPageProps) {
   const { error } = await searchParams;
 
   return (
-    <main className="flex min-h-screen items-center justify-center px-6 py-16">
-      <div className="w-full max-w-xl">
-        <section className="hero-card">
-          <p className="text-sm font-medium uppercase tracking-[0.3em] text-slate-500">
-            Freshly upgraded access
-          </p>
-
-          <h1 className="mt-4 text-4xl font-semibold tracking-tight text-slate-950">
-            Create your IQ+1 account
+    <div className="flex flex-1 items-center justify-center px-6 py-16 sm:py-24">
+      <div className="w-full max-w-md">
+        <div className="text-center">
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900">
+            Create your account
           </h1>
-
-          <p className="mt-4 text-base leading-7 text-slate-600">
-            Sign up with email and password to keep your future blessings attached
-            to a real account instead of pure internet destiny.
+          <p className="mt-2 text-base text-slate-600">
+            Join the ranks of the intellectually blessed.
           </p>
+        </div>
 
+        <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
           {error ? (
-            <div className="mt-6 rounded-2xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">
+            <div className="mb-6 rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">
               {error}
             </div>
           ) : null}
 
-          <form action={signup} className="mt-8 space-y-5">
+          <form action={signup} className="space-y-4">
             <div>
               <label
                 htmlFor="email"
-                className="mb-2 block text-sm font-medium text-slate-700"
+                className="mb-1.5 block text-sm font-medium text-slate-700"
               >
                 Email
               </label>
@@ -47,7 +42,7 @@ export default async function SignupPage({ searchParams }: SignupPageProps) {
                 name="email"
                 type="email"
                 required
-                className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-900 outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-200"
+                className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-violet-300 focus:ring-2 focus:ring-violet-100"
                 placeholder="you@example.com"
               />
             </div>
@@ -55,7 +50,7 @@ export default async function SignupPage({ searchParams }: SignupPageProps) {
             <div>
               <label
                 htmlFor="password"
-                className="mb-2 block text-sm font-medium text-slate-700"
+                className="mb-1.5 block text-sm font-medium text-slate-700"
               >
                 Password
               </label>
@@ -65,29 +60,30 @@ export default async function SignupPage({ searchParams }: SignupPageProps) {
                 type="password"
                 required
                 minLength={6}
-                className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-900 outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-200"
+                className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-violet-300 focus:ring-2 focus:ring-violet-100"
                 placeholder="At least 6 characters"
               />
             </div>
 
             <button
               type="submit"
-              className="inline-flex w-full items-center justify-center rounded-full bg-slate-950 px-6 py-3 text-base font-medium text-white transition hover:bg-slate-800"
+              className="w-full rounded-full bg-slate-900 px-6 py-3.5 text-base font-semibold text-white transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
             >
-              Sign up
+              Create account
             </button>
           </form>
+        </div>
 
-          <p className="mt-6 text-sm text-slate-500">
-            Already have an account?{" "}
-            <Link href="/login" className="font-medium text-slate-800 underline">
-              Log in
-            </Link>
-          </p>
-        </section>
-
-        <SiteFooter className="mt-6" />
+        <p className="mt-6 text-center text-sm text-slate-500">
+          Already have an account?{" "}
+          <Link
+            href="/login"
+            className="font-medium text-slate-900 hover:underline"
+          >
+            Log in
+          </Link>
+        </p>
       </div>
-    </main>
+    </div>
   );
 }

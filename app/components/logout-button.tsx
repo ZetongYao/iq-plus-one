@@ -1,17 +1,13 @@
 import { logout } from "../auth/actions";
 
-type LogoutButtonProps = {
-  className?: string;
-};
-
-export function LogoutButton({ className = "" }: LogoutButtonProps) {
+export function LogoutButton() {
   return (
     <form action={logout}>
       <button
         type="submit"
-        className={`rounded-full border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:bg-slate-50 ${className}`.trim()}
+        className="rounded-lg px-4 py-2 text-sm font-medium text-slate-500 transition hover:bg-slate-100 hover:text-slate-700"
       >
-        Logout
+        Log out
       </button>
     </form>
   );

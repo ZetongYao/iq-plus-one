@@ -1,33 +1,40 @@
 import Link from "next/link";
-import { SiteFooter } from "../components/site-footer";
 
 export default function CancelPage() {
   return (
-    <main className="flex min-h-screen items-center justify-center px-6 py-16">
-      <div className="w-full max-w-2xl">
-        <section className="hero-card text-center">
-          <p className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-amber-600">
-            Payment cancelled
-          </p>
-
-          <h1 className="text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
-            Payment cancelled. Your brain remains at baseline.
-          </h1>
-
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-slate-600">
-            The universe has decided to keep your intellectual stats unchanged for now.
-          </p>
-
-          <Link
-            href="/"
-            className="mt-10 inline-flex items-center justify-center rounded-full border border-slate-300 px-6 py-3 text-base font-medium text-slate-800 transition hover:border-slate-400 hover:bg-slate-50"
+    <div className="flex flex-1 items-center justify-center px-6 py-16 sm:py-24">
+      <div className="mx-auto max-w-lg text-center">
+        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-amber-50">
+          <svg
+            className="h-8 w-8 text-amber-500"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
           >
-            Try again
-          </Link>
-        </section>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z"
+            />
+          </svg>
+        </div>
 
-        <SiteFooter className="mt-6" />
+        <h1 className="mt-6 text-3xl font-bold tracking-tight text-slate-900">
+          Checkout Cancelled
+        </h1>
+
+        <p className="mt-4 text-base leading-relaxed text-slate-600">
+          Your brain remains at baseline. The universe respects your timing.
+        </p>
+
+        <Link
+          href="/"
+          className="mt-8 inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-base font-semibold text-white transition hover:bg-slate-800"
+        >
+          Try again
+        </Link>
       </div>
-    </main>
+    </div>
   );
 }
