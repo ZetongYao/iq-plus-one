@@ -18,12 +18,12 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
             Welcome back
           </h1>
-          <p className="mt-2 text-base text-slate-500">
+          <p className="mt-2 text-base text-slate-600">
             Sign in to manage your brain portfolio.
           </p>
         </div>
 
-        <div className="mt-8 rounded-2xl border border-slate-200/60 bg-white p-8 shadow-sm">
+        <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
           {message ? (
             <div className="mb-6 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">
               {message}
@@ -49,7 +49,7 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
                 name="email"
                 type="email"
                 required
-                className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
+                className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-violet-300 focus:ring-2 focus:ring-violet-100"
                 placeholder="you@example.com"
               />
             </div>
@@ -66,7 +66,7 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
                 name="password"
                 type="password"
                 required
-                className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
+                className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-violet-300 focus:ring-2 focus:ring-violet-100"
                 placeholder="Your password"
               />
             </div>

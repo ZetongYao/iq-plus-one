@@ -26,20 +26,20 @@ export default async function PurchaseHistoryPage() {
     <div className="px-6 py-12 sm:py-16">
       <div className="mx-auto max-w-3xl">
         <div>
-          <p className="text-sm font-medium uppercase tracking-widest text-slate-400">
+          <p className="text-sm font-medium uppercase tracking-widest text-violet-500">
             History
           </p>
           <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
             Purchase History
           </h1>
-          <p className="mt-2 text-base text-slate-500">
+          <p className="mt-2 text-base text-slate-600">
             A record of the blessings your wallet has endorsed.
           </p>
         </div>
 
         {orders.length === 0 ? (
-          <div className="mt-8 rounded-2xl border border-slate-200/60 bg-white p-8 text-center shadow-sm">
-            <p className="text-base text-slate-500">
+          <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-8 text-center shadow-sm">
+            <p className="text-base text-slate-600">
               No orders yet. Your brain remains financially unenhanced.
             </p>
             <Link
@@ -54,10 +54,10 @@ export default async function PurchaseHistoryPage() {
             {orders.map((order) => (
               <div
                 key={order.id}
-                className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-slate-200/60 bg-white px-6 py-5 shadow-sm"
+                className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-slate-200 bg-white px-6 py-5 shadow-sm"
               >
                 <div className="flex items-center gap-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-sm">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-violet-50 text-sm">
                     &#x1F9E0;
                   </div>
                   <div>

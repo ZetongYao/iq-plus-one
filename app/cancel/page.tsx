@@ -24,7 +24,7 @@ export default function CancelPage() {
           Checkout Cancelled
         </h1>
 
-        <p className="mt-4 text-base leading-relaxed text-slate-500">
+        <p className="mt-4 text-base leading-relaxed text-slate-600">
           Your brain remains at baseline. The universe respects your timing.
         </p>
 

@@ -17,12 +17,12 @@ export default async function SignupPage({ searchParams }: SignupPageProps) {
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">
             Create your account
           </h1>
-          <p className="mt-2 text-base text-slate-500">
+          <p className="mt-2 text-base text-slate-600">
             Join the ranks of the intellectually blessed.
           </p>
         </div>
 
-        <div className="mt-8 rounded-2xl border border-slate-200/60 bg-white p-8 shadow-sm">
+        <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
           {error ? (
             <div className="mb-6 rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">
               {error}
@@ -42,7 +42,7 @@ export default async function SignupPage({ searchParams }: SignupPageProps) {
                 name="email"
                 type="email"
                 required
-                className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
+                className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-violet-300 focus:ring-2 focus:ring-violet-100"
                 placeholder="you@example.com"
               />
             </div>
@@ -60,7 +60,7 @@ export default async function SignupPage({ searchParams }: SignupPageProps) {
                 type="password"
                 required
                 minLength={6}
-                className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
+                className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-violet-300 focus:ring-2 focus:ring-violet-100"
                 placeholder="At least 6 characters"
               />
             </div>

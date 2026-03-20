@@ -59,7 +59,7 @@ export default async function SuccessPage({ searchParams }: SuccessPageProps) {
             Verification Failed
           </h1>
 
-          <p className="mt-4 text-base leading-relaxed text-slate-500">
+          <p className="mt-4 text-base leading-relaxed text-slate-600">
             {statusMessage}
           </p>
 
@@ -97,15 +97,15 @@ export default async function SuccessPage({ searchParams }: SuccessPageProps) {
           IQ +1 Granted
         </h1>
 
-        <p className="mt-4 text-lg leading-relaxed text-slate-500">
+        <p className="mt-4 text-lg leading-relaxed text-slate-600">
           Your brain has been officially enhanced. Please use your new cognitive
           vibes responsibly.
         </p>
 
         {/* Result card */}
-        <div className="mt-8 rounded-2xl border border-slate-200/60 bg-white p-6 shadow-sm">
-          <div className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-sm font-medium text-emerald-700">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+        <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <div className="inline-flex items-center gap-2 rounded-full bg-violet-50 px-3 py-1 text-sm font-medium text-violet-700">
+            <span className="h-1.5 w-1.5 rounded-full bg-violet-500" />
             Certified Enhanced
           </div>
           <p className="mt-4 text-base leading-relaxed text-slate-600">
